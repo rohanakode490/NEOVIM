@@ -3,18 +3,17 @@ local opts = { noremap = true, silent = true }
 
 keymap.set("n", "x", "_x")
 
+keymap.set("n", "<C-b>", "<nop>", opts)
+
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
 -- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
+keymap.set("n", "<C-a>", "ggVG")
 
 -- Delete a word backwards
 keymap.set("n", "dw", "vb_d")
-
--- Jumplist
-keymap.set("n", "<C-a>", "<C-i>", opts)
 
 -- Save file and quit
 keymap.set("n", "<Leader>w", ":update<Return>", opts)
@@ -41,12 +40,12 @@ keymap.set("n", "sj", "<C-w>j")
 keymap.set("n", "sl", "<C-w>l")
 
 -- Resize Window
-keymap.set("n", "<C-S-h>", "<C-w><")
-keymap.set("n", "<C-S-l>", "<C-w>>")
-keymap.set("n", "<C-S-k>", "<C-w>+")
-keymap.set("n", "<C-S-j>", "<C-w>-")
+keymap.set("n", "<C-Left>", "<C-w><")
+keymap.set("n", "<C-Right>", "<C-w>>")
+keymap.set("n", "<C-Up>", "<C-w>+")
+keymap.set("n", "<C-Down>", "<C-w>-")
 
 -- Diagnostics
-keymap.set("n", "<C-j>", function()
+keymap.set("n", "<C->>", function()
   vim.diagnostic.goto_next()
 end)

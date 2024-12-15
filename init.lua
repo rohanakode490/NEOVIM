@@ -8,3 +8,9 @@ end
 vim.print = _G.dd
 
 require("config.lazy")
+
+require("nvim-tree").setup({
+  filters = {
+    dotfiles = false, -- Show dotfiles (like .env)
+  },
+})
