@@ -30,6 +30,7 @@ require('lazy').setup {
   require 'plugins.misc',
   require 'plugins.comment',
   require 'plugins.autotag',
+  require 'plugins.debug',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
